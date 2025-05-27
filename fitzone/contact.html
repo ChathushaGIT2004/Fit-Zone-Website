@@ -1,0 +1,155 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - FitZone Fitness Center</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('resources/contactbg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: rgb(253, 250, 250);
+        }
+
+        /* Header */
+        header {
+            background-color: #0b090a;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 24px;
+            position: relative;
+        }
+        .logo {
+            position: absolute;
+            left: 20px;
+            top: 10px;
+            width: 120px; 
+            height: auto;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #161a1d;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            padding: 10px 15px;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            background-color: #a4161a;
+            border-radius: 5px;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            max-width: 900px;
+            margin: 50px auto;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .contact-container h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #660708;
+        }
+
+        .contact-info {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+        }
+
+        .contact-form {
+            text-align: left;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background: #ba181b;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background: #161a1d;
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="resources/logo.jpeg" alt="FitZone Logo" class="logo">
+        FitZone Fitness Center
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about us.html">About</a>
+        <a href="team.html">Our Team</a>
+        <a href="Blog.html">Blogs & Feedbacks</a>
+        <a href="membership.html">Membership</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.php">Login</a>
+    </nav>
+
+    <div class="contact-container">
+        <h2>Get in Touch</h2>
+        <div class="contact-info">
+            <p><strong>Address:</strong> 123 Fit Street, Kurunegala, Sri Lanka</p>
+            <p><strong>Phone:</strong> +94 77 123 4567</p>
+            <p><strong>Email:</strong> contact@fitzone.com</p>
+            <p><strong>Opening Hours:</strong> Mon - Sat: 5 AM - 10 PM | Sun: 6 AM - 8 PM</p>
+        </div>
+        
+        <h2>Send Us a Message</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <footer>
+        &copy; 2025 FitZone Fitness Center | Stay Fit, Stay Strong
+    </footer>
+
+</body>
+</html>

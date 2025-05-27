@@ -1,0 +1,151 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitZone Fitness Center</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:0b090a;
+        }
+
+        /* Header */
+        header {
+            background-color:0b090a;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 24px;
+        }
+        .logo {
+            position: absolute;
+            left: 20px;
+            width: 150px; 
+            height: 150px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color:161a1d;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            color:a4161a;
+        }
+
+        /* Hero Section */
+        .hero {
+            background:  no-repeat center center/cover;
+            color: d3d3d3;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        
+
+        /* Sections */
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px 0;
+            text-align: center;
+            color:d3d3d3;
+        }
+
+        .services {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .service-box {
+            background: rgb(93, 11, 11);
+            padding: 20px;
+            margin: 10px;
+            width: 30%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .service-box h3 {
+            color: white;
+        }
+        .service-box img {
+            width: 50%;
+            height: 180px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="resources/logo.jpeg" alt="FitZone Logo" class="logo">
+        FitZone Fitness Center
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Membership</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <section class="hero">
+        <h1>Welcome to FitZone Fitness Center</h1>
+        <p>Achieve Your Fitness Goals with Our Expert Training & Nutrition Plans</p>
+        
+    </section>
+
+    <div class="container">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="service-box">
+                <img src="resources/personal training.jpg" alt="Personal Training">
+                <h3>Personal Training</h3>
+                <p>Work with certified trainers to reach your fitness goals effectively.</p>
+            </div>
+            <div class="service-box">
+                <img src="resources/group classes.jpg" alt="Group Classes">
+                <h3>Group Classes</h3>
+                <p>Join our fun and energetic classes, including yoga, cardio, and strength training.</p>
+            </div>
+            <div class="service-box">
+                <img src="resources/nutrition.jpg" alt="Nutrition Counseling">
+                <h3>Nutrition Counseling</h3>
+                <p>Get a personalized diet plan to complement your fitness journey.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 FitZone Fitness Center | Designed for a Healthier You
+    </footer>
+
+</body>
+</html>

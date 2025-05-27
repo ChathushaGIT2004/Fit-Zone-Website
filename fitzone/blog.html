@@ -1,0 +1,274 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & Feedback - FitZone Fitness Center</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('resources/gbg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: rgb(6, 6, 6);
+        }
+
+        /* Header */
+        header {
+            background-color: #0b090a;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 24px;
+            position: relative;
+        }
+        .logo {
+            position: absolute;
+            left: 20px;
+            top: 10px;
+            width: 120px; 
+            height: auto;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #161a1d;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            padding: 10px 15px;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            background-color: #a4161a;
+            border-radius: 5px;
+        }
+        .Active{
+            background-color: #a4161a;
+        }
+    
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        .blog-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .blog-box {
+            background:rgb(200, 244, 195);
+            padding: 15px;
+            border-radius: 10px;
+            width: 250px;
+            box-shadow: 0 4px 8px rgba(249, 243, 243, 0.86);
+            cursor: pointer;
+            transition: 0.3s;
+            position: relative;
+        }
+        .blog-box:hover {
+            transform: scale(1.05);
+        }
+        .blog-box h3 {
+            margin: 10px 0;
+        }
+        .blog-post {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #ddec8a;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(238, 233, 233, 0.873);
+            width: 50%;
+            max-height: 80%;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 18px;
+            cursor: pointer;
+            color: red;
+        }
+
+        .feedback {
+            margin-top: 30px;
+            padding: 30px;
+            background: rgb(200, 244, 195);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(244, 235, 235, 0.962);
+        }
+        .feedback input, .feedback textarea {
+            width: 50%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #040404;
+            border-radius: 5px;
+        }
+        .feedback button {
+            background: #a4161a;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .feedback button:hover {
+            background: #720b0e;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.jpeg" alt="FitZone Logo" class="logo">
+        FitZone Fitness Center
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about us.html">About</a>
+        <a href="team.html">Our Team</a>
+        <a href="blog.html" class="Active">Blogs & Feedbacks</a>
+        <a href="membership.html">Membership</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.php">Login</a>
+    </nav>
+
+
+    <div class="container">
+        <h2>Latest Blog Posts</h2>
+        <div class="blog-container">
+            <div class="blog-box" onclick="openBlog('post1')">
+                <h3>Workout Routines: Build Strength and Confidence 💪</h3>
+                <p>At FitZone Fitness Center, we believe that true strength isn’t just about lifting heavier weights—it’s about building endurance, improving posture, and....</p>
+            </div>
+            <div class="blog-box" onclick="openBlog('post2')">
+                <h3>Healthy Recipes: Fuel Your Body the Right Way 🥗</h3>
+                <p>Eating right is just as important as working out. After an intense session at FitZone, your muscles need proper nutrition to recover.....</p>
+            </div>
+            <div class="blog-box" onclick="openBlog('post3')">
+                <h3>Meal Plans: Eat Smart, Stay Fit 🍽️</h3>
+                <p>Your fitness journey doesn’t end at the gym—what you eat plays a massive role in achieving results!...</p>
+            </div>
+            <div class="blog-box" onclick="openBlog('post4')">
+                <h3>Success Stories: Real People, Real Transformations 🏆</h3>
+                <p>How John lost 50 pounds in 6 months...</p>
+            </div>
+        </div>
+
+        <div id="post1" class="blog-post">
+            <span class="close-btn" onclick="closeBlog('post1')">&times;</span>
+            <h2>5 Best Workouts for Strength</h2>
+            <p>At FitZone Fitness Center, we believe that true strength isn’t just about lifting heavier weights—it’s about building endurance, improving posture, and boosting overall health. Whether you’re a beginner or an experienced lifter, these five powerhouse exercises will help you achieve your fitness goals.<br>
+
+                🔹 Deadlifts – A full-body movement that strengthens your back, core, and legs. Mastering deadlifts enhances your posture and prevents injuries.<br>
+                
+                🔹 Squats – The king of leg exercises! Squats develop your quads, hamstrings, and glutes while improving lower body strength and mobility.<br>
+                
+                🔹 Bench Press – Want a well-defined upper body? The bench press is the ultimate move for building chest, shoulder, and tricep strength.<br>
+                
+                🔹 Pull-Ups – A true test of upper body power! Pull-ups engage your back, biceps, and core, improving muscle endurance and grip strength.<br>
+                
+                🔹 Planks – More than just a core exercise! Planks strengthen your entire body, enhancing balance, stability, and endurance.<br><br>
+                
+                Ready to take your strength to the next level? Join our expert-led training sessions at FitZone and transform the way you work out!
+                
+                </p>
+        </div>
+        <div id="post2" class="blog-post">
+            <span class="close-btn" onclick="closeBlog('post2')">&times;</span>
+            <h2>Protein-Packed Smoothie for Post-Workout Recovery</h2>
+            <p>Eating right is just as important as working out. After an intense session at FitZone, your muscles need proper nutrition to recover and grow. Our delicious, protein-rich smoothie is the perfect post-workout treat!<br>
+
+                🥤 Ingredients:<br>
+                ✅ 1 ripe banana (for natural sweetness and potassium)<br>
+                ✅ 1 scoop whey or plant-based protein powder (to repair muscle tissue)<br>
+                ✅ ½ cup oats (for sustained energy)<br>
+                ✅ 1 tbsp peanut butter (healthy fats for muscle recovery)<br>
+                ✅ 1 cup almond milk (for a smooth, creamy texture)<br><br>
+                
+                💡 How to Prepare:<br>
+                Blend all ingredients until smooth. Pour into a glass, take a sip, and enjoy the refreshing goodness while your body refuels!<br>
+                
+                💪 Pro Tip: Pair this smoothie with a handful of almonds or a boiled egg for an extra protein boost.</p>
+        </div>
+        <div id="post3" class="blog-post">
+            <span class="close-btn" onclick="closeBlog('post3')">&times;</span>
+            <h2>7-Day Meal Plan for Fat Loss & Muscle Definition</h2>
+            <p>Your fitness journey doesn’t end at the gym—what you eat plays a massive role in achieving results! This 7-day meal plan is designed to help you burn fat, build muscle, and stay energized.<br>
+
+                📅 Day-by-Day Guide:<br>
+                ✅ Monday – Grilled chicken with quinoa and steamed vegetables<br>
+                ✅ Tuesday – Oven-baked salmon with roasted sweet potatoes<br>
+                ✅ Wednesday – Lean turkey wrap with whole wheat tortilla<br>
+                ✅ Thursday – Stir-fried lean beef with brown rice and broccoli<br>
+                ✅ Friday – Greek yogurt with mixed berries and nuts<br>
+                ✅ Saturday – Scrambled eggs with avocado on whole wheat toast<br>
+                ✅ Sunday – Lentil soup with whole grain bread<br><br>
+                
+                🥗 Why This Works:<br>
+                
+                High in protein to build and repair muscles<br>
+                Rich in fiber to keep you feeling full longer<br>
+                Balanced with healthy fats for better metabolism<br><br>
+                FitZone members receive customized meal plans tailored to their fitness goals. Let’s fuel your journey together!</p>
+        </div>
+
+        <div id="post4" class="blog-post">
+            <span class="close-btn" onclick="closeBlog('post4')">&times;</span>
+            <h2>John’s 50-Pound Weight Loss Journey</h2>
+            <p>John had struggled with his weight for years. He tried multiple diets and workouts but never saw lasting results—until he joined FitZone.<br>
+
+                🏋️‍♂️ His Strategy:<br>
+                ✔️ Started with small changes: walking 10 minutes daily, switching to healthier meals<br>
+                ✔️ Joined strength training and cardio sessions at FitZone<br>
+                ✔️ Maintained a consistent routine with the help of expert trainers<br>
+                
+                📉 The Results:<br>
+                🔹 Lost 50 pounds in 6 months<br>
+                🔹 Built lean muscle and increased stamina<br>
+                🔹 Regained confidence and a healthier lifestyle<br>
+                
+                💬 John Says:<br>
+                "FitZone changed my life! The trainers, the meal plans, and the positive environment kept me motivated. If I can do it, so can you!"<br><br>
+                
+                👉 Are you ready to write your success story? Start today at FitZone Fitness Center!
+                
+                </p>
+        </div>
+        </div>
+
+        <h2>Share Your Story & Feedback</h2>
+        <div class="feedback">
+            <p>Email us your success story at: <strong>fitzonefeedback@email.com</strong></p>
+            <form action="" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <textarea name="message" placeholder="Write your experience..." required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        function openBlog(id) {
+            document.getElementById(id).style.display = 'block';
+        }
+        function closeBlog(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+    </script>
+</body>
+</html>
+ 
